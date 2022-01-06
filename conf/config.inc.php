@@ -47,6 +47,14 @@ $ldap_filter = "(&(objectClass=person)($ldap_login_attribute={login}))";
 $ldap_use_exop_passwd = false;
 $ldap_use_ppolicy_control = false;
 
+# UCS API mode (univention corporate server)
+# true: use UCS API to change password
+# false: follow ad_mode and sambe_mode
+$ucs_mode = false;
+$ucs_api_url = "https://localhost/univention/udm/";
+$ucs_api_user = "apiuser";
+$ucs_api_pass = "secret";
+
 # Active Directory mode
 # true: use unicodePwd as password field
 # false: LDAPv3 standard behavior
